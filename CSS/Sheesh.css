@@ -20,6 +20,7 @@
     background-color: rgb(33, 33, 33);
     border-radius: 5px;
     overflow: hidden;
+    vertical-align: middle;
 }
   
 .topnav a {
