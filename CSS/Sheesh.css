@@ -4,7 +4,14 @@
 }
 
 .page {
-    background-color: rgb(30, 30, 30);
+    background: linear-gradient(to top, #333333 45%, #1a1a1a 100%);
+}
+
+.pagetitle {
+    background-color: rgb(143, 143, 143);
+    border-radius: 5px;
+    width: auto;
+    margin: -5px;
 }
 
 .content {
