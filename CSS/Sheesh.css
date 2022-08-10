@@ -18,20 +18,30 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif ;
 }
 
+.content2 {
+    background-color: rgb(114, 114, 114);
+    border-radius: 5px;
+    margin: auto;
+    width: 90%;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+}
+
 .topnav {
     background-color: rgb(114, 114, 114);
     border-radius: 5px;
     overflow: hidden;
     margin: auto;
     width: 90%;
-    height: auto;
+    height: 100%;
 }
   
 .topnav a {
     display: inline-block;
     color: #f2f2f2;
     text-align: center;
-    padding: 10px 20px;
+    padding: 15px 25px;
     font-size: 18px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
