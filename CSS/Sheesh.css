@@ -7,7 +7,6 @@
     background-color: rgb(30, 30, 30);
 }
 
-
 .content {
     background-color: rgb(114, 114, 114);
     border-radius: 5px;
@@ -50,9 +49,12 @@
     background-color: rgb(73, 73, 73);
     color: rgb(255, 255, 255);
 }
-  
 
 .topnav a.active {
     background-color: #bfbfbf;
     color: rgb(255, 255, 255);
  }
+
+.secondimg {
+    border-radius: 5px;
+}
