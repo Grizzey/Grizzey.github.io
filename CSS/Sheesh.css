@@ -3,8 +3,12 @@
     height: auto;
 }
 
+.logo {
+    margin: auto;
+}
+
 .page {
-    background: linear-gradient(to right, #333333 45%, #1a1a1a 100%);
+    background: linear-gradient(to right, #333333 10%, #1a1a1a 100%);
     display: block;
     margin: auto;
 }
@@ -22,7 +26,7 @@
     display: block;
     color: rgb(255, 255, 255);
     text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    font-family: monospace;
 }
 
 .content2 {
@@ -33,7 +37,7 @@
     display: block;
     color: rgb(255, 255, 255);
     text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+    font-family: monospace;
 }
 
 .topnav {
@@ -45,6 +49,8 @@
     text-align: center;
     width: 70%;
     height: 100%;
+    font-family: monospace;
+    text-decoration: none;
 }
   
 .topnav a {
@@ -53,7 +59,7 @@
     text-align: center;
     padding: 15px 25px;
     font-size: 18px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: monospace;
 }
   
 .topnav a:hover {
@@ -66,6 +72,15 @@
     color: rgb(255, 255, 255);
  }
 
+.other {
+    text-decoration: none;
+}
+
+
 .secondimg {
     border-radius: 5px;
+}
+
+.Display {
+    text-align: center;
 }
