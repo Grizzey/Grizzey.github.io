@@ -1,0 +1,38 @@
+.page {
+    background-color: rgb(67, 67, 67);
+}
+
+
+.content {
+    background-color: rgb(41, 41, 41);
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+}
+
+.topnav {
+    background-color: rgb(33, 33, 33);
+    border-radius: 5px;
+    overflow: hidden;
+}
+  
+.topnav a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+  
+.topnav a:hover {
+    background-color: rgba(149, 91, 15, 0.549);
+    color: rgb(255, 255, 255);
+}
+  
+
+.topnav a.active {
+    background-color: #6e3a0f;
+    color: rgb(255, 255, 255);
+ }
