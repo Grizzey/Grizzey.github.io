@@ -1,3 +1,3 @@
 function myFunction() {
-    alert("Pakyu")
+    alert("Labyu <3")
 }
