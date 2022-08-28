@@ -3,19 +3,64 @@
 <link rel="icon" type="image/x-icon" href="/Media/Logo.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link = rel="stylesheet" href="../MyPage/CBStudiosOfficial.github.io/CSS/debug.css">
+<script type="text/javascript" src="../CBStudiosOfficial.github.io/Scripts/ButtonRedirect.js"></script>
 
 <style>
+
     body {
         background-image: url("Media/Background.jpg");
         background-repeat: no-repeat;
         background-size: 100em;
     }
+
+
+    .container-parent {
+        box-shadow: 0em .5em 10px rgb(40, 40, 40);
+        background: #ffffff;
+        height: 13em;
+        width: 20em;
+        position: relative;
+        margin: auto;
+        margin-top: 10em;
+        border-radius: .25em;
+    }
+
+    .container-title {
+        text-align: center;
+        font-family: 'Courier New', Courier, monospace;
+        text-shadow: 0em .1em 2px grey;
+    }
+
+    .container-p {
+        text-align: center;
+        margin-top: 3.5em;
+        font-family: 'Courier New', Courier, monospace;
+        text-shadow: 0em .20em 2px gray;
+    }
+
+    .container-button {
+        margin-top: 2em;
+        margin-left: 8.5em;
+        height: 1.25em;
+        width: 3em;
+        background-color: rgb(95, 194, 42);
+        border: none;
+        border-radius: .25em;
+        font-size: 1em;
+        color: black;
+        box-shadow: 0em .20em rgb(19, 72, 13);
+    }
+
+    .container-button:hover {
+        background-color: rgb(82, 166, 36);
+        color: rgb(0, 0, 0);
+    }
 </style>
 
 <div>
-
-    <h3 class="title">Coming soon...</h3>
-    <p>This page is on work</p>
-
+    <div class="container-parent">
+        <h3 class="container-title">Notice</h3>
+        <p class="container-p">Sorry but this page is being reworked</p>
+        <button class="container-button" onclick="Button1();">Ok</button>
+    </div>
 </div>
