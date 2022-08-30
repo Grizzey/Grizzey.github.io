@@ -17,18 +17,24 @@
     body {
         background-image: url("Media/Background.jpg");
         background-repeat: no-repeat;
-        background-size: 100em;
+        background-size: cover;
     }
 
+    .logo {
+        position: relative;
+        margin: auto;
+        margin-left: 39.5em;
+        width: 5em;
+    }
 
     .container-parent {
         box-shadow: 0em .5em 10px rgb(40, 40, 40);
-        background: #656565;
+        background: #efefef;
         height: 17em;
         width: 24em;
         position: relative;
         margin: auto;
-        margin-top: 10em;
+        margin-top: 4em;
         border-radius: .25em;
     }
 
@@ -36,17 +42,17 @@
         color: white;
         text-align: center;
         font-family: 'Courier New', Courier, monospace;
-        text-shadow: 0em .1em 2px rgb(0, 0, 0);
-        background-color: rgb(35, 35, 35);
+        text-shadow: 0em .1em 2px rgb(104, 104, 104);
+        background-color: rgb(21, 21, 21);
         border-radius: .25em;
     }
 
     .container-p {
-        color: white;
+        color: rgb(0, 0, 0);
         text-align: center;
         margin-top: 3.5em;
         font-family: 'Courier New', Courier, monospace;
-        text-shadow: 0em .20em 2px rgb(0, 0, 0);
+        text-shadow: 0em .095em 2px rgb(0, 0, 0);
     }
 
     .container-button {
@@ -67,9 +73,39 @@
         color: rgb(0, 0, 0);
     }
 
+    .bottom {
+        background-color:#373737;
+        box-shadow: 0em .5em 10px rgb(16, 16, 16);
+        height: 5em;
+        width: 30em;
+        margin: auto;
+        border-radius: .25em;
+        position: relative;
+        margin: auto;
+        margin-top: 4em;
+        opacity: 0.5;
+    }
 
+    .contact {
+        font-family: 'Courier New', Courier, monospace;
+        color: white;
+        margin-left: .25em;
+        font-size: medium;
+        text-shadow: 0em .15em 3px black;
+        margin-top: 8em;
+    }
+
+    .contact-child {
+        font-family: 'Courier New', Courier, monospace;
+        color: white;
+        font-size: .80em;
+        margin-left: 1em;
+        text-shadow: 0em .15em 3px black;
+    }
 
 </style>
+
+<img class="logo" src="../CBStudiosOfficial.github.io/Media/Grizz.png">
 
 <div>
     <div class="container-parent">
@@ -77,4 +113,10 @@
         <p class="container-p">Sorry but this page is being reworked</p>
         <button class="container-button" onclick="redirect();">Ok</button>
     </div>
+</div>
+
+<div class="bottom">
+    <h3 class="contact">Contact</h3>
+    <p class="contact-child">Facebook: ??? | Twitter: Grizz_Oofficial</p>
+    <p class="contact-child">Discord: GR1ZZ#8577</p>
 </div>
