@@ -1,0 +1,91 @@
+body {
+    color: #efefef;
+}
+
+.page-container {
+    position: relative;
+}
+
+
+.main-content {
+    position: relative;
+}
+
+.logo {
+    text-align: center;
+    position: relative;
+    margin: auto;
+    width: 5em;
+}
+
+.container-parent {
+    box-shadow: 0em .5em 10px rgb(40, 40, 40);
+    background: #efefef;
+    height: 17em;
+    width: 24em;
+    position: relative;
+    margin: auto;
+}
+
+.container-title {
+    color: white;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 0em .1em 2px rgb(104, 104, 104);
+    background-color: rgb(21, 21, 21);
+}
+
+.container-p {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-top: 4em;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 0em .095em 2px rgb(0, 0, 0);
+}
+
+.container-button {
+    margin-top: 7em;
+    margin-left: 10.30em;
+    height: 1.25em;
+    width: 3em;
+    background-color: rgb(95, 194, 42);
+    border: none;
+    font-size: 1em;
+    color: black;
+    box-shadow: 0em .20em rgb(19, 72, 13);
+}
+
+.container-button:hover {
+    background-color: rgb(82, 166, 36);
+    color: rgb(0, 0, 0);
+}
+
+
+footer {
+    text-align: center;
+    background-color: #ffffff;
+    border-style: groove;
+    height: 7em;
+    width: 30em;
+    bottom: 0;
+    margin-left: 30rem;
+    display: flexbox;
+    margin-right: 100%;
+}
+
+.contact {
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(0, 0, 0);
+    margin-left: .25em;
+    font-size: medium;
+    text-shadow: 0em .15em 3px black;
+}
+
+.contact-child {
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(0, 0, 0);
+    font-size: .80em;
+    margin-left: 1em;
+    text-shadow: 0em .15em 3px black;
+}
+
