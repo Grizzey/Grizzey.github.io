@@ -15,11 +15,16 @@
 
     <style>
         body {
-            background-image: url("Media/Background.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-            max-width: 100%;
+            color: #efefef;
+        }
 
+        .page-container {
+            position: relative;
+        }
+
+
+        .main-content {
+            position: relative;
         }
 
         .logo {
@@ -36,7 +41,6 @@
             width: 24em;
             position: relative;
             margin: auto;
-            margin-top: 4em;
         }
 
         .container-title {
@@ -72,64 +76,56 @@
             color: rgb(0, 0, 0);
         }
 
-        .bottom {
-            background-color: #373737;
-            box-shadow: 0em .5em 10px rgb(16, 16, 16);
-            height: 5em;
+        
+        footer {
+            text-align: center;
+            background-color: #ffffff;
+            border-style: groove;
+            height: 7em;
             width: 30em;
-            margin: auto;
-            /*border-radius: .25em;*/
-            position: relative;
-            margin: auto;
-            margin-top: 4em;
-            opacity: 0.5;
+            bottom: 0;
+            display: flexbox;
+            margin-right: 100%;
         }
-
+        
         .contact {
             font-family: 'Courier New', Courier, monospace;
-            color: white;
+            color: rgb(0, 0, 0);
             margin-left: .25em;
             font-size: medium;
             text-shadow: 0em .15em 3px black;
-            margin-top: 8em;
         }
 
         .contact-child {
             font-family: 'Courier New', Courier, monospace;
-            color: white;
+            color: rgb(0, 0, 0);
             font-size: .80em;
             margin-left: 1em;
             text-shadow: 0em .15em 3px black;
         }
-        
-        .basta {
-            text-align: center;
-            color: grey;
-        }
-        
+
+
     </style>
 </head>
 
 <body>
-    <div>
-        <div class="container-parent">
-            <h3 class="container-title">Notice</h3>
-            <p class="container-p">Sorry but this page is being reworked</p>
-            <button class="container-button" onclick="redirect();">Ok</button>
-        </div>
-    </div>
-    
-    <div>
-        <h6 class="basta">Hello :)</h6>
-    </div>    
-    
-    
-</body>
 
-<footer>
-    <div class="bottom">
-        <h3 class="contact">Contact</h3>
-        <p class="contact-child">Facebook: ??? | Twitter: Grizz_Oofficial</p>
-        <p class="contact-child">Discord: GR1ZZ#8577</p>
+    <div class="page-container"">
+
+        <div class="main-content">
+            <div class="container-parent">
+                <h3 class="container-title">Notice</h3>
+                <p class="container-p">Sorry but this page is being reworked</p>
+                <button class="container-button" onclick="redirect();">Ok</button>
+            </div>
+        </div>
+
+        <footer>
+            <h3 class="contact">Contact</h3>
+            <p class="contact-child">Facebook: ??? | Twitter: Grizz_Oofficial</p>
+            <p class="contact-child">Discord: GR1ZZ#8577</p>
+        </footer>
+
     </div>
-<footer>
+
+</body>
