@@ -6,17 +6,14 @@
     <meta charset="utf-8">
     <link rel="icon" type="image/x-icon" href="/Media/Grizz.ico">
 
-    <script type="text/javascript" src="Scripts/ButtonRedirect.js"></script>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-
+    <!--<script type="text/javascript" src="Scripts/ButtonRedirect.js"></script>-->
+    
     <!--JQUERY-->>
-    <script>
-        
-        
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js">
+        $('#ok').click(function(){
+            alert("BOOM")
+        });
     </script>
-
-
-
 
     <link = rel="stylesheet" href="../CSS/OnWork.css">
 </head>
@@ -34,7 +31,7 @@
                         </ul>
                     </div>
 
-                    <button class="OK_Button">Ok</button>
+                    <button id="ok">Ok</button>
             </div>
         </div>
     </div>
