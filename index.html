@@ -1,4 +1,4 @@
-<!--DOCTYPE html-->
+<!DOCTYPE html>
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,10 +9,16 @@
     <!--<script type="text/javascript" src="Scripts/ButtonRedirect.js"></script>-->
     
     <!--JQUERY-->>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js">
-        $('#ok').click(function(){
-            alert("BOOM")
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+    <script type="text/javascript">
+        var okbutton = document.getElementById(".ok")
+
+        console.log(okbutton)
+
+        okbutton.click(function(){
+            alert("boom")
         });
+
     </script>
 
     <link = rel="stylesheet" href="../CSS/OnWork.css">
@@ -31,7 +37,7 @@
                         </ul>
                     </div>
 
-                    <button id="ok">Ok</button>
+                    <button type="button" name="ok" class="ok">Ok</button>
             </div>
         </div>
     </div>
