@@ -8,34 +8,51 @@
 
     <!--<script type="text/javascript" src="Scripts/ButtonRedirect.js"></script>-->
     
-    <!--JQUERY-->>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-    <script type="text/javascript">
-        var okbutton = document.getElementById(".ok")
+    <!--Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
-        console.log(okbutton)
+    <!--JQUERY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var thisthing = document.getElementById("ok")
+            console.log(thisthing)
+            $(thisthing).click(function(){
+                alert("boom");
+            })
 
-        okbutton.click(function(){
-            alert("boom")
+            var passwordbox = document.getElementById("password");
+            var showpassbutton = document.getElementById("show_pass");
+            var currentvalue = false
+            $(showpassbutton).click(function(){
+                if (currentvalue == false) {
+                    currentvalue = true
+                    console.log(currentvalue)
+                    passwordbox.type = 'text'
+                } else if (currentvalue == true) {
+                    currentvalue = false
+                    console.log(currentvalue)
+                    passwordbox.type = 'password'
+                }
+            })
+
         });
-
     </script>
 
-    <link = rel="stylesheet" href="../CSS/OnWork.css">
+    <link = rel="stylesheet" href="../CSS/LoginPage.css">
 </head>
 
 <body>
-    <div class="page-container"">
+    <div class="page-container">
         <div class="main-content">
             <div class="Login_Container">
-                    <p class="container-p">Sorry but this page is being reworked</p>
-                        <div class="creds_holder">
-                            <h4 id="login_label">Login</h4>
-                            <input id="name" placeholder="Name">
-                            <input type="password" id="password" placeholder="Password">
-                            <button type="button" id="show_pass">Show</button>
-                        </div>
-                    <button type="button" name="ok" class="ok">Ok</button>
+                <p id="login_logo">Logo placeholder</p>
+                <div id="login">
+                    <h4 id="loginLabel">Login</h4>
+                    <input id="name" required="" placeholder="Name">
+                    <input type="password" id="password" required="" placeholder="Password">
+                    <button class="far fa-eye" id="show_pass"></button>
+                </div>
             </div>
         </div>
     </div>
