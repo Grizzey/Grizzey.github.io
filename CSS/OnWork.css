@@ -35,12 +35,20 @@ html, body {
     flex-direction: column;
 }
 
+
 .creds_holder {
-    background-color: aqua;
+    display: flex;
+    flex-direction: column;
     margin: auto;
 }
 
+.login_label {
+    margin: auto;
+    text-align: center;
+}
+
 #name {
+    order: 1;
     border-radius: 4px;
     margin-bottom: 20px;
     opacity: 0.7;
@@ -49,11 +57,17 @@ html, body {
 #name:hover {opacity: 1;}
 
 #password {
+    order: 2;
     border-radius: 4px;
-    opacity: 0.7;
+    opacity: 0.7;  
     transition: 0.4s;
 }
 #password:hover {opacity: 1;}
+
+.show_pass {
+    bottom: 0;
+    order: 3;
+}
 
 .OK_Button {
     margin-top: 7em;
