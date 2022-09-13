@@ -33,6 +33,19 @@
         });
     </script>
 
+    <script>
+        var MongoClient = require('mongodb').MongoClient;
+        var url = "mongodb+srv://grizzey:Ti6WbyNUM4lC3vvD@cluster0.idmps6k.mongodb.net/test";
+
+        MongoClient.connect(url, function(err, db) {
+            if (err) throw err;
+            console.log("Database created!");
+            db.close();
+        });
+    </script>
+
+
+
     <link = rel="stylesheet" href="../CSS/LoginPage.css">
 </head>
 
