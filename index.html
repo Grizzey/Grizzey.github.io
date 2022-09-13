@@ -39,7 +39,31 @@
         });
     </script>
 
-    <?php>
+    <!--FIRBASE DB-->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.9.4/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+    
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+        apiKey: "AIzaSyAhNTY_Wm_i2dQqpYHXXyLrMpidLTQkrTs",
+        authDomain: "boredwebsite-1fb00.firebaseapp.com",
+        databaseURL: "https://boredwebsite-1fb00-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "boredwebsite-1fb00",
+        storageBucket: "boredwebsite-1fb00.appspot.com",
+        messagingSenderId: "227895356203",
+        appId: "1:227895356203:web:628481a94c04836489f36e",
+        measurementId: "G-4CHLSBRFMH"
+        };
+    
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
 
 
 
