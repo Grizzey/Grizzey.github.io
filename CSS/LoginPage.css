@@ -40,12 +40,17 @@ html, body{
     margin: auto;
     margin-top: 10em;
     flex-direction: column;
+    border-radius: 4px;
+    border-style: solid;
+    border-color: rgb(95, 95, 95);
+    border-width: 2px;
 }
 
 #login_logo {
     color:magenta;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     margin: auto;
+    transform: rotate(-9deg);
 }
 
 
@@ -71,6 +76,10 @@ html, body{
 }
 #name:hover {opacity: 1;}
 
+#passholder {
+    width: 1000px;
+}
+
 #password {
     font-family: monospace;
     order: 2;
@@ -83,25 +92,14 @@ html, body{
 #show_pass {
     background-color: rgba(255, 255, 255, 0);
     border: none;
-    order: 3;
+    cursor: pointer;
 }
 
-.OK_Button {
-    margin-top: 7em;
-    margin-left: 10.30em;
-    height: 1.25em;
-    width: 3em;
-    background-color: rgb(95, 194, 42);
-    border: none;
-    font-size: 1em;
-    color: black;
-    box-shadow: 0em .20em rgb(19, 72, 13);
-    bottom: 0;
+#login_button {
+    margin: 10px 0px 0px 122px;
+    background-color: gray;
+    border-color: rgb(95, 95, 95);
+    height: 25px;
+    border-radius: 3.5px;
+    cursor: pointer;
 }
-
-.OK_Button {
-    opacity: 0.6;
-    transition: 0.3s;
-}
-
-.OK_Button:hover {opacity: 1}
