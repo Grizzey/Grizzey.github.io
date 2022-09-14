@@ -1,7 +1,6 @@
 {
   "dependencies": {
-    "jquery": "^3.6.1",
-    "mongodb": "4.9"
+    "jquery": "^3.6.1"
   },
   "name": "grizzey.github.io",
   "version": "1.0.0",
