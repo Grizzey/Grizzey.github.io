@@ -11,8 +11,9 @@
     <!--Icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
-    <!--JQUERY-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!--JQUERY, USERHANDLER-->
+    <script src="../Scripts/jquery.js"></script>
+    <script src="../Scripts/UserHandler.js"></script>
     <script>
         $(document).ready(function(){
             var passwordbox = document.getElementById("password");
@@ -30,6 +31,12 @@
                 }
             })
 
+
+            
+            var form = document.getElementById("loginform");
+            function handleForm(event) { event.preventDefault(); } 
+            form.addEventListener('submit', handleForm);
+
         });
     </script>
 
@@ -43,10 +50,10 @@
                 <p id="login_logo">Logo placeholder</p>
                 <div id="login">
                     <h4 id="loginLabel">Login</h4>
-                    <form>
-                        <input id="name" required="" placeholder="Name">
+                    <form id="loginform">
+                        <input id="name" required="" placeholder="Name" value="">
                             <div id="passholder">
-                                <input type="password" id="password" required="" placeholder="Password">
+                                <input type="password" id="password" required="" placeholder="Password" value="">
                                 <button class="far fa-eye" id="show_pass"></button>
                             </div>
                     </form>
