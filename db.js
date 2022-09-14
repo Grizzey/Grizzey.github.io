@@ -1,8 +1,24 @@
-var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb+srv://grizzey:Ti6WbyNUM4lC3vvD@cluster0.idmps6k.mongodb.net/test";
+const { MongoClient } = require("mongodb");
 
-MongoClient.connect(url, function(err, db) {
-    if (err) throw err;
-    console.log("Database created!");
-    db.close();
-});
+// Replace the uri string with your connection string.
+const uri =
+  "mongodb+srv://grizzey:KGoDEhgi0J8CAh7M@cluster0.idmps6k.mongodb.net/test";
+
+const client = new MongoClient(uri);
+
+async function run() {
+  try {
+    const database = client.db('test');
+    const movies = database.collection('users');
+
+    // Query for a movie that has the title 'Back to the Future'
+    const query = { title: 'Back to the Future' };
+    const movie = await movies.findOne(query);
+
+    console.log(movie);
+  } finally {
+    // Ensures that the client will close when you finish/error
+    await client.close();
+  }
+}
+run().catch(console.dir);

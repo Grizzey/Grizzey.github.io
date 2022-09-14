@@ -1,6 +1,24 @@
 {
   "dependencies": {
     "jquery": "^3.6.1",
-    "mongodb": "^4.9.1"
-  }
+    "mongodb": "4.9"
+  },
+  "name": "grizzey.github.io",
+  "version": "1.0.0",
+  "main": "db.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CBStudiosOfficial/CBStudiosOfficial.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CBStudiosOfficial/CBStudiosOfficial.github.io/issues"
+  },
+  "homepage": "https://github.com/CBStudiosOfficial/CBStudiosOfficial.github.io#readme",
+  "description": ""
 }
