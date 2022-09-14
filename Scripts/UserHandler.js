@@ -5,12 +5,12 @@ $(document).ready(function() {
             password: "crazyrapidboots"
         },
         {
-            username: "user2",
-            password: "pw2"
+            username: "user",
+            password: "12345"
         },
         {
-            username: "user3",
-            password: "pw3"
+            username: "Terence Montecillo",
+            password: "wow"
         }
     ]
 
