@@ -15,13 +15,13 @@ $(document).ready(function() {
     ]
 
     function loginFunction() {
-        var username = document.getElementById("name").value;
+        var username = document.getElementById("name").value.toLowerCase();
         var password = document.getElementById("password").value;
 
         var mod_username = username.toLowerCase()
 
         for (i = 0; i < userArray.length; i++) {
-            if (mod_username == userArray[i].username && password == userArray[i].password) {
+            if (username == userArray[i].username && password == userArray[i].password) {
                 alert("Hello");
                 break;
             } else {
