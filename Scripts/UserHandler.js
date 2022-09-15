@@ -20,11 +20,8 @@ $(document).ready(function() {
 
         var mod_username = username.toLowerCase()
 
-        console.log(username, password)
-        console.log(mod_username)
-
         for (i = 0; i < userArray.length; i++) {
-            if (username == userArray[i].username && password == userArray[i].password) {
+            if (mod_username == userArray[i].username && password == userArray[i].password) {
                 alert("Hello");
                 break;
             } else {
