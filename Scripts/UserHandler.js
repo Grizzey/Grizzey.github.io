@@ -9,7 +9,7 @@ $(document).ready(function() {
             password: "12345"
         },
         {
-            username: "Terence Montecillo",
+            username: "terence montecillo",
             password: "wow"
         }
     ]
@@ -18,12 +18,18 @@ $(document).ready(function() {
         var username = document.getElementById("name").value;
         var password = document.getElementById("password").value;
 
+        var mod_username = username.toLowerCase()
+
         console.log(username, password)
+        console.log(mod_username)
+
         for (i = 0; i < userArray.length; i++) {
             if (username == userArray[i].username && password == userArray[i].password) {
                 alert("Hello");
+                break;
             } else {
                 console.warn("Skipped")
+                break;
             }
         }
     }
