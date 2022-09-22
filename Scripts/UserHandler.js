@@ -14,6 +14,11 @@ $(document).ready(function() {
         }
     ]
 
+    function windownext() {
+        window.location.href = "https://youtube.com"
+    }
+
+
     function loginFunction() {
         var username = document.getElementById("name").value.toLowerCase();
         var password = document.getElementById("password").value;
@@ -22,7 +27,7 @@ $(document).ready(function() {
 
         for (i = 0; i < userArray.length; i++) {
             if (username == userArray[i].username && password == userArray[i].password) {
-                alert("Hello");
+                windownext()
                 break;
             } else {
                 console.warn("Skipped")
