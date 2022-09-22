@@ -5,45 +5,27 @@
     <title>Grizz's Profile</title>
     <meta charset="utf-8">
     <link rel="icon" type="image/x-icon" href="/Media/Grizz.ico">
-
-    <!--<script type="text/javascript" src="Scripts/ButtonRedirect.js"></script>-->
     
     <!--Icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
     <!--JQUERY, USERHANDLER-->
     <script src="../Scripts/jquery.js"></script>
-    <script src="../Scripts/UserHandler.js"></script>
-    <script>
-        $(document).ready(function(){
-            var passwordbox = document.getElementById("password");
-            var showpassbutton = document.getElementById("show_pass");
-            var currentvalue = false
-            $(showpassbutton).click(function(){
-                if (currentvalue == false) {
-                    currentvalue = true
-                    console.log(currentvalue)
-                    passwordbox.type = 'text'
-                } else if (currentvalue == true) {
-                    currentvalue = false
-                    console.log(currentvalue)
-                    passwordbox.type = 'password'
-                }
-            })
 
-
-            
-            var form = document.getElementById("loginform");
-            function handleForm(event) { event.preventDefault(); } 
-            form.addEventListener('submit', handleForm);
-
-        });
-    </script>
-
-    <link = rel="stylesheet" href="../CSS/LoginPage.css">
+    <link = rel="stylesheet" href="../CSS/indexcss.css">
 </head>
 
 <body>
-    <div class="vig"></div>
+    <!-- <div class="vig"></div> -->
+    <div class="screenfiller"></div>
+    
+    <div class="navbar">
+        <a class="active"></a>
+    </div>
+
+    <div class="nameholder">
+        <a id="name">GRIZZ</a>
+    </div>
+
 
 </body>
