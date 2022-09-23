@@ -5,27 +5,191 @@
     <title>Grizz's Profile</title>
     <meta charset="utf-8">
     <link rel="icon" type="image/x-icon" href="/Media/Grizz.ico">
-    
+
+    <!--Fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?">
+
     <!--Icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
     <!--JQUERY, USERHANDLER-->
     <script src="../Scripts/jquery.js"></script>
 
-    <link = rel="stylesheet" href="../CSS/indexcss.css">
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
+
+    <!--External CSS-->
+    <link=rel="stylesheet" href="../CSS/indexcss.css">
+
+        <!--Internal CSS (new)-->
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
+
+            html,
+            body {
+                position: inherit;
+                height: 100%;
+                background-color: rgb(37, 37, 37);
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                /*overflow: hidden;*/
+
+                user-select: none;
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+            }
+
+            body::-webkit-scrollbar {
+                width: 5px;
+            }
+
+            body::-webkit-scrollbar-thumb {
+                background-color: rgb(131, 131, 131);
+            }
+
+
+            .vig {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                box-shadow: 0 0 100em rgba(0, 0, 0, 0.9) inset;
+            }
+
+            .navbar {
+                z-index: 100;
+                width: auto;
+                height: 60px;
+                position: fixed;
+                background-color: aliceblue;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
+
+            .screenfiller {
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: rgb(37, 37, 37);
+            }
+
+            .nameholder {
+                z-index: 95;
+                width: 600px;
+                height: 500px;
+                position: absolute;
+                right: 0px;
+                top: 60px;
+                background: rgb(40, 40, 40);
+                background: linear-gradient(90deg, rgba(40, 40, 40, 0) 0%, rgba(0, 0, 0, 0.447) 100%);
+                text-align: center;
+            }
+
+            #name {
+                height: 10px;
+                min-width: 150px;
+                color: white;
+                line-height: 3em;
+                font-family: 'Exo 2';
+                font-weight: 100;
+                font-size: 100px;
+            }
+
+            #aboutme {
+                z-index: 96;
+                height: 10em;
+                width: 100%;
+                position: absolute;
+                background-color: blueviolet;
+                bottom: 0;
+                left: 0;
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            .navbar #myLinks {
+                display: none;
+                float: right;
+            }
+
+            .navbar a {
+                float: left;
+                color: rgb(0, 0, 0);
+                padding: 20px 20px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+
+            .navbar a.icon {
+                float: left;
+            }
+
+            .navbar a:hover {
+                background-color: #ddd;
+                color: black;
+            }
+
+            .active {
+                background-color: #04AA6D;
+                color: white;
+            }
+        </style>
+
+
 </head>
 
 <body>
     <!-- <div class="vig"></div> -->
-    <div class="screenfiller"></div>
-    
+    <!--- <div class="screenfiller"></div> --->
+
     <div class="navbar">
-        <a class="active"></a>
+        <div id="myLinks">
+            <a href="#home">Logo</a>
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
     </div>
 
     <div class="nameholder">
         <a id="name">GRIZZ</a>
     </div>
 
+    <div id="aboutme"></div>
 
 </body>
