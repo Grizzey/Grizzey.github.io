@@ -16,7 +16,11 @@
     <script src="../Scripts/jquery.js"></script>
 
     <script>
-        function myFunction() {
+        const element = document.getElementById("content");
+        element.style.height = element.scrollHeight + "px";
+        element.style.width = element.scrollWidth + "px";
+
+        function OpenNavBar() {
             var x = document.getElementById("myLinks");
             if (x.style.display === "block") {
                 x.style.display = "none";
@@ -69,6 +73,14 @@
                 box-shadow: 0 0 100em rgba(0, 0, 0, 0.9) inset;
             }
 
+            .content {
+                position: absolute;
+                display: flexbox;
+                flex-flow: column;
+                width: 100%;
+                height: 100%;
+            }
+
             .navbar {
                 z-index: 100;
                 width: auto;
@@ -80,64 +92,6 @@
                 bottom: 0;
                 left: 0;
             }
-
-            .screenfiller {
-                height: 100%;
-                width: 100%;
-                position: absolute;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                background-color: rgb(37, 37, 37);
-            }
-
-            .nameholder {
-                z-index: 95;
-                width: 600px;
-                height: 500px;
-                position: absolute;
-                right: 0px;
-                top: 60px;
-                background: rgb(40, 40, 40);
-                background: linear-gradient(90deg, rgba(40, 40, 40, 0) 0%, rgba(0, 0, 0, 0.447) 100%);
-                text-align: center;
-            }
-
-            #name {
-                height: 10px;
-                min-width: 150px;
-                color: white;
-                line-height: 3em;
-                font-family: 'Exo 2';
-                font-weight: 100;
-                font-size: 100px;
-            }
-
-            #aboutme {
-                z-index: 96;
-                height: 10em;
-                width: 100%;
-                position: absolute;
-                background-color: blueviolet;
-                bottom: 0;
-                left: 0;
-            }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
             .navbar #myLinks {
                 display: none;
@@ -165,6 +119,39 @@
                 background-color: #04AA6D;
                 color: white;
             }
+
+            .screenfiller {
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: rgb(37, 37, 37);
+            }
+
+            .nameholder {
+                z-index: 95;
+                width: 600px;
+                height: 500px;
+                position: absolute;
+                right: 0px;
+                top: 60px;
+                /*background: rgb(40, 40, 40);*/
+                /*background: linear-gradient(90deg, rgba(40, 40, 40, 0) 0%, rgba(0, 0, 0, 0.447) 100%);*/
+                text-align: center;
+            }
+
+            #name {
+                height: 10px;
+                min-width: 150px;
+                color: white;
+                line-height: 3em;
+                font-family: 'Exo 2';
+                font-weight: 100;
+                font-size: 70px;
+            }
         </style>
 
 
@@ -181,15 +168,14 @@
             <a href="#contact">Contact</a>
             <a href="#about">About</a>
         </div>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <a href="javascript:void(0);" class="icon" onclick="OpenNavBar()">
             <i class="fa fa-bars"></i>
         </a>
     </div>
 
-    <div class="nameholder">
-        <a id="name">GRIZZ</a>
+    <div id="content">
+        <div class="nameholder">
+            <a id="name">GRIZZ</a>
+        </div>
     </div>
-
-    <div id="aboutme"></div>
-
 </body>
