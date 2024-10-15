@@ -7,6 +7,11 @@
     <meta charset="utf-8">
     <link rel="icon" type="image/x-icon" href="/Media/Grizz.ico">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+
     <style>
         :root {
             --border-radius-5: 5px;
@@ -25,7 +30,7 @@
             position: absolute;
             margin: auto;
             width: 60%;
-            height: 400px;
+            height: 550px;
             border-radius: var(--border-radius-5);
             left: 50%;
             top: 50%;
@@ -158,6 +163,35 @@
             width: 100%;
             padding: 5px;
         }
+
+        #project_container>ul {
+            padding: 0;
+            margin: 0;
+        }
+
+        #projects_container>ul>li {
+            margin: 20px;
+            padding: 0;
+            list-style-type: none;
+
+        }
+
+        #projects_container>ul>li>input:hover {
+            opacity: .5;
+        }
+
+        #projects_container>ul>li>input {
+            margin: 0;
+            padding: 15px;
+            color: white;
+            font-family: "Source Code Pro", monospace;
+            font-size: 20px;
+            border: 0;
+            background-color: rgb(25, 67, 235);
+            transition: opacity 0.35s;
+            opacity: 1;
+            cursor: pointer;
+        }
     </style>
 
     <script>
@@ -171,6 +205,19 @@
             }
         }
 
+        function openProjectCard(a) {
+            try {
+                if (a == 'windowsProject') {
+                    window.open("https://jabaitech.github.io/comprog1-java-windows");
+                } else if (a == 'BLANK') {
+                    //BLANK
+                    alert('Coming Soon...');
+                }
+            } catch(err) {
+                console.error("Error at:" + err);
+            }
+
+        }
     </script>
 
 </head>
@@ -202,9 +249,15 @@
                     <div id="socialIcons">
                         <a>Socials</a>
                         <ul>
-                            <li><button type="button"><img height="32" width="32" src="https://cdn.simpleicons.org/instagram/white" onclick="openSocial('instagram')" /></button></li>
-                            <li><button type="button"><img height="32" width="32" src="https://cdn.simpleicons.org/github/white" onclick="openSocial('github')"/></button></li>
-                            <li><button type="button"><img height="32" width="32" src="https://cdn.simpleicons.org/discord/white" onclick="openSocial('discord')"/></button></li>
+                            <li><button type="button"><img height="32" width="32"
+                                        src="https://cdn.simpleicons.org/instagram/white"
+                                        onclick="openSocial('instagram')" /></button></li>
+                            <li><button type="button"><img height="32" width="32"
+                                        src="https://cdn.simpleicons.org/github/white"
+                                        onclick="openSocial('github')" /></button></li>
+                            <li><button type="button"><img height="32" width="32"
+                                        src="https://cdn.simpleicons.org/discord/white"
+                                        onclick="openSocial('discord')" /></button></li>
                         </ul>
                     </div>
 
@@ -215,8 +268,9 @@
 
             <div id="projects_container">
                 <ul>
-                    <li id="project1"><input type="button" value="Not done yet"></li>
-                    <li id="project2"><input type="button" value="Not done yet"></li>
+                    <li id="project1"><input type="button" onclick="openProjectCard('windowsProject')"
+                            value="Windows Style Website"></li>
+                    <li id="project2"><input type="button" onclick="openProjectCard('BLANK')" value="Not done yet"></li>
                 </ul>
             </div>
         </div>
