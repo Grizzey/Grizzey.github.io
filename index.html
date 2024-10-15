@@ -17,11 +17,22 @@
             --border-radius-5: 5px;
             --text-color-default: rgb(245, 222, 180);
             --text-color-other: rgb(170, 155, 130);
+            --text-color-white: rgb(255, 255, 255);
         }
 
         body {
             background-color: #6F4E37;
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            user-select: none;
+        }
+
+        img {
+            pointer-events: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -o-user-select: none;
+            user-select: none;
         }
 
         .center {
@@ -68,8 +79,32 @@
         }
 
         #desc {
+            font-family: "Source Code Pro", monospace;
             margin: 0;
-            color: var(--text-color-other)
+            color: var(--text-color-other);
+            border-bottom: 1px solid var(--text-color-other);
+        }
+
+        #organizations>ul {
+            padding: 0;
+            padding-top: 20px;
+            margin: 0;
+        }
+
+        #organizations>ul>li {
+            color: var(--text-color-white);
+            font-family: "Source Code Pro", monospace;
+            margin: 0;
+            list-style: none;
+        }
+
+        #otherInfo {
+            padding-top: 10px;
+        }
+
+        #otherInfo > p {
+            color: var(--text-color-white);
+            margin: 0;
         }
 
         .rightCards {
@@ -148,6 +183,8 @@
 
         #headerLabel {
             color: var(--text-color-default);
+            font-family: "Source Code Pro", monospace;
+            font-weight: 100;
             text-align: left;
             margin-left: 20px;
             margin-right: 20px;
@@ -193,33 +230,6 @@
             cursor: pointer;
         }
     </style>
-
-    <script>
-        function openSocial(e) {
-            if (e == 'instagram') {
-                window.open("https://www.instagram.com/nbit.lnk/");
-            } else if (e == 'github') {
-                window.open("https://github.com/Grizzey")
-            } else if (e == 'discord') {
-                window.open("https://discord.com/users/489963091019169802")
-            }
-        }
-
-        function openProjectCard(a) {
-            try {
-                if (a == 'windowsProject') {
-                    window.open("https://jabaitech.github.io/comprog1-java-windows");
-                } else if (a == 'BLANK') {
-                    //BLANK
-                    alert('Coming Soon...');
-                }
-            } catch(err) {
-                console.error("Error at:" + err);
-            }
-
-        }
-    </script>
-
 </head>
 
 <body>
@@ -230,6 +240,18 @@
                 <div class="nameAndbio">
                     <p id="name">nBit</p>
                     <p id="desc">Still learning stuff</p>
+
+                    <div id="otherInfo">
+                        <p id="job">Student</p>
+                        <p id="age"></p>
+                    </div>
+                    
+                    <div id="organizations">
+                        <ul>
+                            <li>JabaiTech</li>
+                            <li>BitForge Studio</li>
+                        </ul>
+                    </div>
                 </div>
 
                 <div class="rightCards">
@@ -270,9 +292,44 @@
                 <ul>
                     <li id="project1"><input type="button" onclick="openProjectCard('windowsProject')"
                             value="Windows Style Website"></li>
-                    <li id="project2"><input type="button" onclick="openProjectCard('BLANK')" value="Not done yet"></li>
+                    <li id="project2"><input type="button" onclick="openProjectCard('BLANK')" value="Wala na :P"></li>
                 </ul>
             </div>
         </div>
     </div>
+
+
+
+
+    <script>
+        function openSocial(e) {
+            if (e == 'instagram') {
+                window.open("https://www.instagram.com/nbit.lnk/");
+            } else if (e == 'github') {
+                window.open("https://github.com/Grizzey")
+            } else if (e == 'discord') {
+                window.open("https://discord.com/users/489963091019169802")
+            }
+        }
+
+        function openProjectCard(a) {
+            try {
+                if (a == 'windowsProject') {
+                    window.open("https://jabaitech.github.io/comprog1-java-windows");
+                } else if (a == 'BLANK') {
+                    //BLANK
+                    alert('Coming Soon...');
+                }
+            } catch (err) {
+                console.error("Error at:" + err);
+            }
+        }
+
+        var dob = new Date("04/27/2008");
+        var month_diff = Date.now() - dob.getTime(); 
+        var age_dt = new Date(month_diff);
+        var year = age_dt.getUTCFullYear();
+        var age = Math.abs(year - 1970);
+        document.getElementById('age').innerHTML = age
+    </script>
 </body>
