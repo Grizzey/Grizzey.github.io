@@ -12,6 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
         rel="stylesheet">
 
+    <script src="./script.js"></script>
+
     <style>
         :root {
             --border-radius-5: 5px;
@@ -26,14 +28,22 @@
             user-select: none;
         }
 
-        img {
-            pointer-events: none;
-            -webkit-user-select: none;
-            -khtml-user-select: none;
-            -moz-user-select: none;
-            -o-user-select: none;
-            user-select: none;
+        @media screen {
+            img {
+                pointer-events: none;
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                -o-user-select: none;
+                user-select: none;
+            }
+
+            #profileImage {
+                width: 200px;
+                border-top-left-radius: var(--border-radius-5);
+            }
         }
+
 
         .center {
             background-color: #3D3A36;
@@ -55,10 +65,7 @@
             display: flex;
         }
 
-        #profileImage {
-            width: 200px;
-            border-top-left-radius: var(--border-radius-5);
-        }
+
 
         .nameAndbio {
             margin-left: 20px;
@@ -103,7 +110,7 @@
             padding-top: 10px;
         }
 
-        #otherInfo > p {
+        #otherInfo>p {
             color: var(--text-color-white);
             margin: 0;
         }
@@ -246,7 +253,7 @@
                         <p id="job">Student</p>
                         <p id="age"></p>
                     </div>
-                    
+
                     <div id="organizations">
                         <ul>
                             <li>JabaiTech</li>
@@ -272,15 +279,12 @@
                     <div id="socialIcons">
                         <a>Socials</a>
                         <ul>
-                            <li><button type="button"><img height="32" width="32"
-                                        src="https://cdn.simpleicons.org/instagram/white"
-                                        onclick="openSocial('instagram')" /></button></li>
-                            <li><button type="button"><img height="32" width="32"
-                                        src="https://cdn.simpleicons.org/github/white"
-                                        onclick="openSocial('github')" /></button></li>
-                            <li><button type="button"><img height="32" width="32"
-                                        src="https://cdn.simpleicons.org/discord/white"
-                                        onclick="openSocial('discord')" /></button></li>
+                            <li onclick="openSocial('instagram')"><button type="button"><img height="32" width="32"
+                                        src="https://cdn.simpleicons.org/instagram/white" /></button></li>
+                            <li onclick="openSocial('github')"><button type="button"><img height="32" width="32"
+                                        src="https://cdn.simpleicons.org/github/white" /></button></li>
+                            <li onclick="openSocial('discord')"><button type="button"><img height="32" width="32"
+                                        src="https://cdn.simpleicons.org/discord/white" /></button></li>
                         </ul>
                     </div>
 
@@ -297,40 +301,7 @@
                 </ul>
             </div>
         </div>
+
     </div>
 
-
-
-
-    <script>
-        function openSocial(e) {
-            if (e == 'instagram') {
-                window.open("https://www.instagram.com/nbit.lnk/");
-            } else if (e == 'github') {
-                window.open("https://github.com/Grizzey")
-            } else if (e == 'discord') {
-                window.open("https://discord.com/users/489963091019169802")
-            }
-        }
-
-        function openProjectCard(a) {
-            try {
-                if (a == 'windowsProject') {
-                    window.open("https://jabaitech.github.io/comprog1-java-windows");
-                } else if (a == 'BLANK') {
-                    //BLANK
-                    alert('Coming Soon...');
-                }
-            } catch (err) {
-                console.error("Error at:" + err);
-            }
-        }
-
-        var dob = new Date("04/27/2008");
-        var month_diff = Date.now() - dob.getTime(); 
-        var age_dt = new Date(month_diff);
-        var year = age_dt.getUTCFullYear();
-        var age = Math.abs(year - 1970);
-        document.getElementById('age').innerHTML = age
-    </script>
 </body>
