@@ -23,7 +23,7 @@ function openProjectCard(a) {
     try {
         if (a == 'windowsProject') {
             window.open("https://jabaitech.github.io/comprog1-java-windows");
-        } else if (a == 'windows98Project') {
+        } if (a == 'windows98Project') {
             window.open("https://jabaitech.github.io/comprog1-windows98")
         } else if (a == 'BLANK') {
             //BLANK
