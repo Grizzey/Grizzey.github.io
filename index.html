@@ -63,7 +63,7 @@
 			margin-top: 20px;
 		}
 
-		#badgeContainer > a {
+		#badgeContainer>a {
 			margin-right: 10px;
 			background-color: #3a506b;
 			padding: 5px;
@@ -143,7 +143,7 @@
 			height: max-content;
 		}
 
-		#projects > h3 {
+		#projects>h3 {
 			margin: 0;
 		}
 
@@ -151,7 +151,7 @@
 			margin-top: 20px;
 		}
 
-		#projects > #grid > a {
+		#projects>#grid>a {
 			background-color: #1c2541;
 			color: white;
 			padding: 10px;
@@ -165,10 +165,33 @@
 		}
 
 		@media screen and (max-width: 800px) {
+			body, html {
+				height: 100%;
+				width: 100%;
+			}
 
 			.container {
 				height: max-content;
 				border-radius: 0;
+				display:flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				flex-wrap: nowrap;
+				padding: auto;
+			}
+
+			#firstCol {
+				flex-direction: column;
+				align-items: center;
+				margin: 0;
+				padding: 0;
+				width: fit-content;
+			}
+
+			#secondCol {
+				padding: 0;
+				justify-items: center;
 			}
 		}
 	</style>
@@ -180,7 +203,7 @@
 			<img id="profile" src="./icons/babysnoopy.jpeg" />
 			<h1>Montecillo, Terence</h1>
 			<p id="desc">Hello there! I am a self taught programmer o(≧∀≦)o</p>
-			
+
 			<p>Age: 16</p>
 			<p>Birthday: 04/27/2008</p>
 			<p>Birthplace: Navotas City</p>
@@ -217,10 +240,12 @@
 
 			<div id="projects">
 				<h3>Recent Projects</h3>
-				
+
 				<div id="grid">
-					<a id=projectButtons" href="https://jabaitech.github.io/comprog1-java-windows/" target="_blank">💻 Wendos Teen</a>
-					<a id=projectButtons" href="https://jabaitech.github.io/comprog1-windows98/" target="_blank">💻 Wendos 98</a>
+					<a id=projectButtons" href="https://jabaitech.github.io/comprog1-java-windows/" target="_blank">💻
+						Wendos Teen</a>
+					<a id=projectButtons" href="https://jabaitech.github.io/comprog1-windows98/" target="_blank">💻
+						Wendos 98</a>
 				</div>
 			</div>
 		</div>
