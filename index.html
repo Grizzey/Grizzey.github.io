@@ -83,7 +83,7 @@
 			align-content: center;
 			justify-content: center;
 			height: 500px;
-			width: 750px;
+			width: fit-content;
 			margin: auto;
 			background-color: #1c2541;
 			border-radius: 20px;
@@ -203,7 +203,6 @@
 			padding-bottom: 30px;
 			margin-top: 10px;
 			border-radius: 20px;
-			height: max-content;
 		}
 
 		#projects>h3 {
@@ -212,15 +211,23 @@
 
 		#grid {
 			margin-top: 20px;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 10px;
+			margin: auto;
 		}
 
-		#projects>#grid>a {
+		#projects>#grid>div {
 			background-color: #1c2541;
-			color: rgb(255, 255, 255);
 			padding: 10px;
-			text-decoration: none;
 			cursor: pointer;
 			border-radius: 10px;
+		}
+
+		#projects>#grid>div>a {
+			color: white;
+			text-decoration: none;
+			text-align: center;
 		}
 
 		#icon {
@@ -267,6 +274,12 @@
 			#secondCol {
 				padding: 0;
 				justify-items: center;
+			}
+
+			#projects>#grid>div>a {
+				color: white;
+				text-decoration: none;
+				font-size: 15px;
 			}
 		}
 	</style>
@@ -319,12 +332,21 @@
 				<h3>Recent Projects</h3>
 
 				<div id="grid">
-					<a id=projectButtons" href="https://jabaitech.github.io/comprog1-java-windows/" target="_blank">💻
-						Wendos Teen</a>
-					<a id=projectButtons" href="https://jabaitech.github.io/comprog1-windows98/" target="_blank">💻
-						Wendos 98</a>
-					<a id="projectButton" href="https://rorosite-front.vercel.app/index.html" target="_blank">💻 
-						Roro Website</a>
+					<div id="projectButtons">
+						<a href="https://jabaitech.github.io/comprog1-java-windows/" target="_blank">
+							💻 Wendos Teen</a>
+					</div>
+
+					<div id="projectButtons">
+						<a href="https://jabaitech.github.io/comprog1-windows98/" target="_blank">
+							💻 Wendos 98</a>
+					</div>
+
+					<div id="projectButtons">
+						<a href="https://rorosite-front.vercel.app/index.html" target="_blank">
+							💻 Roro Website</a>
+					</div>
+
 				</div>
 			</div>
 		</div>
