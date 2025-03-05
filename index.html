@@ -82,32 +82,29 @@
 			flex-direction: row;
 			align-content: center;
 			justify-content: center;
-			height: 500px;
+			height: fit-content;
 			width: fit-content;
 			margin: auto;
 			background-color: #1c2541;
 			border-radius: 20px;
-			padding: 15px;
-			padding-top: 25px;
-			padding-bottom: 25px;
+			padding: 20px;
 		}
 
 		#badgeContainer {
 			display: flex;
 			flex-direction: row;
-			margin-top: 20px;
 		}
 
 		#badgeInfoHolder {
-			display: flex;
-			flex-direction: row;
+			display: grid;
+			grid-template-columns: repeat(3, auto);
+			gap: 10px;
 		}
 
 		#badgeInfoHolder>p {
 			background-color: #3a506b;
 			padding: 5px;
 			border-radius: 10px;
-			margin-right: 10px;
 		}
 
 		#badgeContainer>a {
@@ -125,8 +122,9 @@
 			flex-wrap: wrap;
 			flex-direction: column;
 			height: fit-content;
-			width: 400px;
+			width: 420px;
 			margin-right: 20px;
+			gap: 15px;
 		}
 
 		#firstCol>h1,
@@ -134,6 +132,15 @@
 			margin: 0;
 		}
 
+		#pfp-name-desc {
+			display: flex;
+			gap: 20px
+		}
+
+		#side>h1, p {
+			margin: 0;
+			padding: 0;
+		}
 
 		#desc {
 			color: grey;
@@ -150,7 +157,6 @@
 		#edu {
 			background-color: #3a506b;
 			border-radius: 20px;
-			margin-top: 20px;
 			padding: 20px;
 		}
 
@@ -168,17 +174,29 @@
 			display: flex;
 			align-items: center;
 			flex-direction: column;
+			justify-content: space-between;
+			gap: 10px;
 		}
 
-		#secondCol>h3 {
-			margin-bottom: 5px;
+		#secondCol>div {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		#secondCol>div>h3 {
+			margin: 0;
+			text-align: center;
+			background-color: #3a506b;
+			width: fit-content;
+			padding: 10px;
+			border-top-left-radius: 20px;
+			border-top-right-radius: 20px;
 		}
 
 		#skillGrid {
 			background-color: #3a506b;
 			padding: 10px;
-			padding-left: 23px;
-			padding-right: 23px;
 			border-radius: 20px;
 			width: 100%;
 			display: grid;
@@ -199,10 +217,8 @@
 
 		#projects {
 			background-color: #3a506b;
-			padding: 20px;
-			padding-bottom: 30px;
-			margin-top: 10px;
-			border-radius: 20px;
+			padding: 10px;
+			border-radius: 10px;
 		}
 
 		#projects>h3 {
@@ -260,7 +276,7 @@
 				justify-content: center;
 				align-items: center;
 				flex-wrap: nowrap;
-				padding: auto;
+				gap: 10px;
 			}
 
 			#firstCol {
@@ -288,14 +304,19 @@
 <body>
 	<div class="container">
 		<div id="firstCol">
-			<img id="profile" src="./icons/babysnoopy.jpeg" />
-			<h1>Montecillo, Terence</h1>
-			<p id="desc">Hello there! I am a self taught programmer o(≧∀≦)o</p>
+			<div id="pfp-name-desc">
+				<img id="profile" src="./icons/babysnoopy.jpeg" />
+				<div id="side">
+					<h1>Montecillo, Terence</h1>
+					<p id="desc">Hello there! I am a self taught programmer o(≧∀≦)o</p>
+				</div>
+			</div>
+
 
 			<div id="badgeInfoHolder">
 				<p id="badgeInfo">✨ 16</p>
 				<p id="badgeInfo">🎂 04/27/2008</p>
-				<p id="badgeInfo">📌 Navotas City</p>
+				<p id="badgeInfo">📌 Navotas City, Philippines</p>
 			</div>
 
 			<div id="badgeContainer">
@@ -318,37 +339,41 @@
 		</div>
 
 		<div id="secondCol">
-			<h3>Skills</h3>
+			<div>
+				<h3>Skills</h3>
 
-			<div id="skillGrid">
-				<img id="icon" src="./icons/lua.png" />
-				<img id="icon" src="./icons/python.png" />
-				<img id="icon" src="./icons/openjdk.png" />
-				<img id="icon" src="./icons/html5.png" />
-				<img id="icon" src="./icons/css3.png" />
-			</div>
-
-			<div id="projects">
-				<h3>Recent Projects</h3>
-
-				<div id="grid">
-					<div id="projectButtons">
-						<a href="https://jabaitech.github.io/comprog1-java-windows/" target="_blank">
-							💻 Wendos Teen</a>
-					</div>
-
-					<div id="projectButtons">
-						<a href="https://jabaitech.github.io/comprog1-windows98/" target="_blank">
-							💻 Wendos 98</a>
-					</div>
-
-					<div id="projectButtons">
-						<a href="https://rorosite-front.vercel.app/index.html" target="_blank">
-							💻 Roro Website</a>
-					</div>
-
+				<div id="skillGrid">
+					<img id="icon" src="./icons/lua.png" />
+					<img id="icon" src="./icons/python.png" />
+					<img id="icon" src="./icons/openjdk.png" />
+					<img id="icon" src="./icons/html5.png" />
+					<img id="icon" src="./icons/css3.png" />
 				</div>
 			</div>
+			
+			<div>
+				<h3>Recent Projects</h3>
+				<div id="projects">
+					<div id="grid">
+						<div id="projectButtons">
+							<a href="https://jabaitech.github.io/comprog1-java-windows/" target="_blank">
+								💻 Wendos Teen</a>
+						</div>
+	
+						<div id="projectButtons">
+							<a href="https://jabaitech.github.io/comprog1-windows98/" target="_blank">
+								💻 Wendos 98</a>
+						</div>
+	
+						<div id="projectButtons">
+							<a href="https://rorosite-front.vercel.app/index.html" target="_blank">
+								💻 Roro Website</a>
+						</div>
+	
+					</div>
+				</div>
+			</div>
+			
 		</div>
 	</div>
 </body>
