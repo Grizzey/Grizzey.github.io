@@ -137,7 +137,8 @@
 			gap: 20px
 		}
 
-		#side>h1, p {
+		#side>h1,
+		p {
 			margin: 0;
 			padding: 0;
 		}
@@ -299,6 +300,26 @@
 			}
 		}
 	</style>
+
+	<script>
+		function getAge(birthday) {
+			const dob = new Date(birthday);
+			const month_diff = Date.now() - dob.getTime();
+			const age_dt = new Date(month_diff);
+			const year = age_dt.getUTCFullYear();
+			const age = Math.abs(year - 1970);
+			return age;
+		}
+
+		document.addEventListener("DOMContentLoaded", () => {
+			const agelabel = document.querySelector(".age");
+			const birthday = agelabel.dataset.birthday;
+			const age = getAge(birthday);
+			agelabel.innerHTML = `✨ ${age}`;
+		});
+	</script>
+
+
 </head>
 
 <body>
@@ -314,7 +335,7 @@
 
 
 			<div id="badgeInfoHolder">
-				<p id="badgeInfo">✨ 16</p>
+				<p class="badgeInfo age" data-birthday="04/27/2008">✨ ${age}</p>
 				<p id="badgeInfo">🎂 04/27/2008</p>
 				<p id="badgeInfo">📌 Navotas City, Philippines</p>
 			</div>
@@ -350,7 +371,7 @@
 					<img id="icon" src="./icons/css3.png" />
 				</div>
 			</div>
-			
+
 			<div>
 				<h3>Recent Projects</h3>
 				<div id="projects">
@@ -359,23 +380,23 @@
 							<a href="https://jabaitech.github.io/comprog1-java-windows/" target="_blank">
 								💻 Wendos Teen</a>
 						</div>
-	
+
 						<div id="projectButtons">
 							<a href="https://jabaitech.github.io/comprog1-windows98/" target="_blank">
 								💻 Wendos 98</a>
 						</div>
-	
+
 						<div id="projectButtons">
 							<a href="https://rorosite-front.vercel.app/index.html" target="_blank">
 								💻 Roro Website</a>
 						</div>
-	
+
 					</div>
 				</div>
 			</div>
-			
+
 		</div>
 	</div>
 </body>
 
-</html>
+</html>z
