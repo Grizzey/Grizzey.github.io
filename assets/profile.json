@@ -1,0 +1,85 @@
+{
+  "personalInfo": {
+    "firstName": "Terence Jerrome",
+    "lastName": "Montecillo",
+    "nickname": "KERNL",
+    "age": 17,
+    "birth_day": 27,
+    "birth_month": 4,
+    "birth_year": 2008,
+    "email": "V0nbiU8w@proton.me",
+    "github": "https://github.com/Grizzey"
+  },
+  "summary": "",
+  "skills": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Lua",
+    "Python (basic)",
+    "Roblox Game Development",
+    "Troubleshooting"
+  ],
+  "workExperience": [
+    {
+      "jobTitle": "Commission",
+      "location": "Baguio City, Philippines",
+      "description": [
+        "A registrar controlled student records management."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Senior High School - ICT Strand",
+      "institution": "STI Caloocan",
+      "location": "Caloocan, Philippines",
+      "startDate": "2024",
+      "endDate": "On-going"
+    },
+    {
+      "degree": "Junior High School",
+      "institution": "Governor Andres Pascual College (GAPC)",
+      "location": "Navotas City, Philippines",
+      "startDate": "2020",
+      "endDate": "2024"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Windows 10",
+      "description": "A Windows 10 inspired informative site about Java",
+      "url": "https://jabaitech.github.io/comprog1-java-windows/"
+    },
+    {
+      "name": "Windows 98",
+      "description": "A Windows 98 inspired informative site about Media",
+      "url": "https://jabaitech.github.io/comprog1-windows98/"
+    },
+    {
+      "name": "Roro Site",
+      "description": "A Roro Site proposal",
+      "url": "https://rorosite-front.vercel.app/"
+    },
+    {
+      "name": "Bitforge",
+      "description": "A small game development group website",
+      "url": "https://BitForge1.github.io/"
+    },
+    {
+      "name": "RoFind",
+      "description": "A small project to find better games",
+      "url": "https://ro-find.vercel.app/"
+    }
+  ],
+  "languages": [
+    {
+      "language": "Filipino",
+      "proficiency": "Native"
+    },
+    {
+      "language": "English",
+      "proficiency": "Second language"
+    }
+  ]
+}

@@ -1,0 +1,320 @@
+@import url('./themes.css');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--text-color);
+    font-family: 'Ubuntu', sans-serif;
+    background-color: var(--bg-color);
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    transition: all 0.2s linear;
+}
+
+nav {
+    top: 0;
+    right: 0;
+    background-color: var(--nav-color);
+    position: fixed;
+    width: 100%;
+    margin: 0;
+    padding: 15px 10px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+
+    z-index: 10;
+}
+
+input[type="button"] {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: none;
+    border: 1px solid grey;
+    background-color: var(--color-green);
+}
+
+.profile {
+    background-color: var(--pre-bg);
+    padding: 1rem;
+    border-radius: 5px;
+    border-top-left-radius: 0px;
+    box-sizing: border-box;
+    overflow-x: auto;
+    border: 2px solid #444;
+    font-size: 14px;
+    margin: 0;
+}
+
+main {
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+main>* {
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding: 20px;
+}
+
+.container-view {
+    background-color: var(--top-bg);
+    padding: 1rem;
+    border-radius: 5px;
+    border-top-left-radius: 0px;
+    box-sizing: border-box;
+    overflow-x: auto;
+    border: 2px solid #444;
+    font-size: 14px;
+    margin: 0;
+}
+
+.badges {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#top {
+    background-color: var(--top-bg);
+    margin-top: 20px;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 2px solid #444;
+    font-size: 14px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+#top>#pfp {
+    width: 100px;
+    border-radius: 5px;
+}
+
+.codeviewer {
+    margin-top: 20px;
+}
+
+code {
+    font-family: "JetBrains Mono", monospace;
+}
+
+#projects-panel {
+    background-color: var(--top-bg);
+    padding: 1rem;
+    border-radius: 5px;
+    border-top-left-radius: 0px;
+    box-sizing: border-box;
+    overflow-x: auto;
+    border: 2px solid #444;
+    font-size: 14px;
+    margin: 0;
+}
+
+.tabs {
+    display: flex;
+    gap: 5px;
+}
+
+.tabs>* {
+    background-color: var(--top-bg);
+    width: min-content;
+    padding: 5px 20px;
+    border-radius: 5px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+
+    user-select: none;
+
+    cursor: pointer;
+}
+
+.active {
+    border-left: 2px solid #444;
+    border-top: 2px solid #444;
+    border-right: 2px solid #444;
+}
+
+.tabs> :not(.active) {
+    color: rgb(173, 173, 173);
+}
+
+.project-img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+    border: 2px solid #292929;
+}
+
+fieldset {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+    border-color: #3e3e42;
+
+    gap: 20px
+}
+
+fieldset>img {
+    border-radius: 10px;
+    border: 2px solid #292929;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    -webkit-user-drag: none;
+}
+
+fieldset>a {
+    background-color: var(--button-color);
+    padding: 10px 30px;
+    font-size: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+}
+
+footer>p>a {
+    text-decoration: none;
+    color: rgb(162, 162, 162)
+}
+
+/* CODE THEMING THING */
+.string {
+    color: var(--string);
+}
+
+.number {
+    color: var(--number);
+}
+
+.boolean {
+    color: var(--boolean);
+}
+
+.null {
+    color: var(--null);
+}
+
+.key {
+    color: var(--key);
+}
+
+@media (max-width: 1024px) {
+    main {
+        width: 100%;
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .tabs {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .tabs>* {
+        padding: 5px 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    nav {
+        flex-direction: row;
+        padding: 13px;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    fieldset {
+        width: 100%;
+    }
+
+    #projects-panel,
+    .codeviewer,
+    pre {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    main {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .project-img {
+        max-width: 600px;
+    }
+
+    .badges {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    #top {
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    fieldset>a {
+        font-size: 16px;
+        padding: 8px 20px;
+    }
+
+    main {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    #top>#pfp {
+        width: 80px;
+    }
+
+    .tabs>* {
+        font-size: 12px;
+    }
+
+    .badges {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}

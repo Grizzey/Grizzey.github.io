@@ -1,410 +1,160 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Grizz's Portfolio</title>
-	<link rel="icon" type="image/x-icon" href="./icons/favicon.ico">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rence's Profile</title>
 
-	<!-- Primary Meta Tags -->
-	<meta name="title" content="Grizz's Portfolio" />
-	<meta name="description" content="Take a look at my portfolio (●'◡'●)" />
-
-	<!-- Open Graph / Facebook -->
-	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://grizzey.github.io/" />
-	<meta property="og:title" content="Grizz's Portfolio" />
-	<meta property="og:description" content="Take a look at my portfolio (●'◡'●)" />
-	<meta property="og:image" content="https://grizzey.github.io/icons/metadatacover.png" />
-
-	<!-- Twitter -->
-	<meta property="twitter:card" content="summary_large_image" />
-	<meta property="twitter:url" content="https://grizzey.github.io/" />
-	<meta property="twitter:title" content="Grizz's Portfolio" />
-	<meta property="twitter:description" content="Take a look at my portfolio (●'◡'●)" />
-	<meta property="twitter:image" content="https://grizzey.github.io/icons/metadatacover.png" />
-
-	<!-- Meta Tags Generated with https://metatags.io -->
-
-	<style>
-		@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
-	</style>
-
-	<style>
-		.nunito-Nunito {
-			font-family: "Nunito", serif;
-			font-optical-sizing: auto;
-			font-weight: 500;
-			font-style: normal;
-		}
-
-		body,
-		html {
-			background-color: #0b132b;
-			color: white;
-			padding: 0;
-			margin: 0;
-			display: flex;
-			flex-wrap: nowrap;
-			justify-content: center;
-			font-family: "Nunito", serif;
-			height: 100%;
-			width: 100%;
-			user-select: none;
-		}
-
-		/* width */
-		::-webkit-scrollbar {
-			position: absolute;
-			width: 10px;
-		}
-
-		/* Track
-		::-webkit-scrollbar-track {
-			background: none;
-		} */
-
-		/* Handle */
-		::-webkit-scrollbar-thumb {
-			background: #888;
-			border-radius: 2px;
-		}
-
-		/* Handle on hover */
-		::-webkit-scrollbar-thumb:hover {
-			background: #7e7e7e;
-		}
-
-		.container {
-			display: flex;
-			flex-wrap: wrap;
-			flex-direction: row;
-			align-content: center;
-			justify-content: center;
-			height: fit-content;
-			width: fit-content;
-			margin: auto;
-			background-color: #1c2541;
-			border-radius: 20px;
-			padding: 20px;
-		}
-
-		#badgeContainer {
-			display: flex;
-			flex-direction: row;
-		}
-
-		#badgeInfoHolder {
-			display: grid;
-			grid-template-columns: repeat(3, auto);
-			gap: 10px;
-		}
-
-		#badgeInfoHolder>p {
-			background-color: #3a506b;
-			padding: 5px;
-			border-radius: 10px;
-		}
-
-		#badgeContainer>a {
-			margin-right: 10px;
-			background-color: #3a506b;
-			padding: 5px;
-			border-radius: 10px;
-			color: white;
-			text-decoration: none;
-			cursor: pointer;
-		}
-
-		#firstCol {
-			display: flex;
-			flex-wrap: wrap;
-			flex-direction: column;
-			height: fit-content;
-			width: 420px;
-			margin-right: 20px;
-			gap: 15px;
-		}
-
-		#firstCol>h1,
-		p {
-			margin: 0;
-		}
-
-		#pfp-name-desc {
-			display: flex;
-			gap: 20px
-		}
-
-		#side>h1,
-		p {
-			margin: 0;
-			padding: 0;
-		}
-
-		#desc {
-			color: grey;
-			margin-bottom: 5px;
-		}
-
-		#profile {
-			width: 150px;
-			height: 150px;
-			border: 3px solid white;
-			border-radius: 20px;
-		}
-
-		#edu {
-			background-color: #3a506b;
-			border-radius: 20px;
-			padding: 20px;
-		}
-
-		#edu>h3 {
-			margin: 0;
-		}
-
-		#edu>ul {
-			margin: 0;
-			padding: 0;
-			list-style-type: none;
-		}
-
-		#secondCol {
-			display: flex;
-			align-items: center;
-			flex-direction: column;
-			gap: 10px;
-		}
-
-		#secondCol>div {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-		}
-
-		#secondCol>div>h3 {
-			margin: 0;
-			text-align: center;
-			background-color: #3a506b;
-			width: fit-content;
-			padding: 10px;
-			padding-left: 20px;
-			padding-right: 20px;
-			border-top-left-radius: 20px;
-			border-top-right-radius: 20px;
-		}
-
-		#skillGrid {
-			background-color: #3a506b;
-			padding: 10px;
-			border-radius: 20px;
-			width: 100%;
-			display: grid;
-			grid-template-columns: repeat(3, 1fr);
-			height: fit-content;
-			width: fit-content;
-		}
-
-		#skillGrid>img {
-			background-color: #1c2541;
-			list-style-type: none;
-			margin: 5px;
-			padding: 15px;
-			width: 50px;
-			/* filter: invert(100%); */
-			border-radius: 25px;
-		}
-
-		#projects {
-			background-color: #3a506b;
-			padding: 10px;
-			border-radius: 10px;
-		}
-
-		#projects>h3 {
-			margin: 0;
-		}
-
-		#grid {
-			margin-top: 20px;
-			display: grid;
-			grid-template-columns: repeat(2, 1fr);
-			gap: 10px;
-			margin: auto;
-		}
-
-		#projects>#grid>div {
-			background-color: #1c2541;
-			padding: 10px;
-			cursor: pointer;
-			border-radius: 10px;
-		}
-
-		#projects>#grid>div>a {
-			color: white;
-			text-decoration: none;
-			text-align: center;
-		}
-
-		#icon {
-			width: 50px;
-		}
-
-		@media screen and (max-width: 800px) {
-
-			body,
-			html {
-				height: fit-content;
-				width: 100%;
-			}
-
-			#firstCol>h1 {
-				margin-top: 20px;
-			}
-
-			#desc {
-				margin-top: 10px;
-				margin-bottom: 30px;
-				text-align: center;
-			}
-
-			.container {
-				height: max-content;
-				border-radius: 0;
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				align-items: center;
-				flex-wrap: nowrap;
-				gap: 10px;
-			}
-
-			#firstCol {
-				flex-direction: column;
-				align-items: center;
-				margin: 0;
-				padding: 0;
-				width: fit-content;
-			}
-
-			#secondCol {
-				padding: 0;
-				justify-items: center;
-			}
-
-			#projects>#grid>div>a {
-				color: white;
-				text-decoration: none;
-				font-size: 15px;
-			}
-		}
-	</style>
-
-	<script>
-		function getAge(birthday) {
-			const dob = new Date(birthday);
-			const month_diff = Date.now() - dob.getTime();
-			const age_dt = new Date(month_diff);
-			const year = age_dt.getUTCFullYear();
-			const age = Math.abs(year - 1970);
-			return age;
-		}
-
-		document.addEventListener("DOMContentLoaded", () => {
-			const agelabel = document.querySelector(".age");
-			const birthday = agelabel.dataset.birthday;
-			const age = getAge(birthday);
-			agelabel.innerHTML = `✨ ${age}`;
-		});
-	</script>
+  <meta name="title" content="Rences' Profile">
+  <meta name="description" content="See my profile">
+  <meta name="keywords" content="profile, cv, peronsal site, ict, student">
+  <meta name="robots" content="noindex, nofollow">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="language" content="English">
+  <meta name="author" content="Terence Montecillo">
 
 
+  <link rel="stylesheet" href="./styles/global.css">
+  <link rel="stylesheet" href="./styles/themes.css">
+  <link rel="stylesheet" href="./styles/themeslider.css">
+
+  <script src="./scripts/index.js"></script>
+  <script src="./scripts/theme.js"></script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
-	<div class="container">
-		<div id="firstCol">
-			<div id="pfp-name-desc">
-				<img id="profile" src="./icons/babysnoopy.jpeg" />
-				<div id="side">
-					<h1>Montecillo, Terence</h1>
-					<p id="desc">Hello there! I am a self taught programmer o(≧∀≦)o</p>
-				</div>
-			</div>
 
+  <nav>
+    <p>Profile Editor - v1.0</p>
 
-			<div id="badgeInfoHolder">
-				<p class="badgeInfo age" data-birthday="04/27/2008">✨ ${age}</p>
-				<p id="badgeInfo">🎂 04/27/2008</p>
-				<p id="badgeInfo">📌 Navotas City, Philippines</p>
-			</div>
+    <div class="theme-option-wrapper">
+      <label class="theme-slider" for="theme">
+        <input type="checkbox" id="themeBtn">
+        <div class="slider"></div>
+      </label>
+      <p>Switch Theme</p>
+    </div>
+  </nav>
 
-			<div id="badgeContainer">
-				<a id="badgeLink" href="https://bitforge1.github.io/" target="_blank">🧑‍💼 BitForge</a>
-				<a id="badgeLink" href="https://github.com/jabaitech" target="_blank">🧑‍💼 JabaiTech</a>
-			</div>
+  <main>
 
-			<div id="edu">
-				<h3>Educational Background</h3>
-				<ul>
-					<li>🏫 Junior Highschool
-						<ul>Governor Andres Pascual College (GAPC)</ul>
-					</li>
-					<li>🏫 Senior Highschool
-						<ul>S.T.I Caloocan (Current)</ul>
-					</li>
-				</ul>
-			</div>
+    <div class="container">
+      <div id="top">
+        <img id="pfp" src="./assets/pfp.png" alt="Profile Picture">
+        <div>
+          <h1>Montecillo, Terence Jerrome</h1>
+          <p>You are reading my profile.</p>
+        </div>
 
-		</div>
+        <div class="badges">
+          <img alt="Static Badge" src="https://img.shields.io/badge/Open_for_commissions-green">
+          <img alt="Static Badge" src="https://img.shields.io/badge/Facebook-Rence_Montecillo-blue">
+          <img alt="Static Badge" src="https://img.shields.io/badge/Instagram-kernl.wangan-purple">
 
-		<div id="secondCol">
-			<div>
-				<h3>Skills</h3>
+        </div>
 
-				<div id="skillGrid">
-					<!-- https://skillicons.dev/icons?i=aws,gcp,azure,react,vue,flutter&perline=3 -->
-					<img id="icon" src="https://skillicons.dev/icons?i=lua" />
-					<img id="icon" src="https://skillicons.dev/icons?i=html" />
-					<img id="icon" src="https://skillicons.dev/icons?i=css" />
-					<img id="icon" src="https://skillicons.dev/icons?i=js" />
-					<img id="icon" src="https://skillicons.dev/icons?i=vscode" />
-					<img id="icon" src="https://skillicons.dev/icons?i=python" />
-					<img id="icon" src="https://skillicons.dev/icons?i=java" />
-					<img id="icon" src="https://skillicons.dev/icons?i=androidstudio" />
-					<img id="icon" src="https://skillicons.dev/icons?i=firebase" />
-					<img id="icon" src="https://skillicons.dev/icons?i=photoshop" />
-					<img id="icon" src="https://skillicons.dev/icons?i=illustrator" />
-				</div>
-			</div>
+      </div>
+      <div id="bottom">
+        <div class="codeviewer">
+          <div class="tabs">
+            <p id="profile-btn" class="active">profile.json</p>
+            <p id="projects-btn" class="">projects.ui</p>
+            <p id="md-btn" class="">README.md</p>
+          </div>
 
-			<div>
-				<h3>Recent Projects</h3>
-				<div id="projects">
-					<div id="grid">
-						<div id="projectButtons">
-							<a href="https://jabaitech.github.io/comprog1-java-windows/" target="_blank">
-								💻 Wendos Teen</a>
-						</div>
+          <pre id="profile-panel" class="profile"><code id="output"></code></pre>
 
-						<div id="projectButtons">
-							<a href="https://jabaitech.github.io/comprog1-windows98/" target="_blank">
-								💻 Wendos 98</a>
-						</div>
+          <div id="projects-panel" class="container-view" hidden>
+            <h1 style="text-align: center; user-select: none;">Previous Projects</h1>
+            <fieldset>
+              <legend>Windows 10</legend>
+              <img class="project-img" src="./assets/win10.png" alt="Win10">
+              <a href="https://jabaitech.github.io/comprog1-java-windows/" target="_blank">
+                <p>Visit</p>
+              </a>
+            </fieldset>
 
-						<div id="projectButtons">
-							<a href="https://rorosite-front.vercel.app/index.html" target="_blank">
-								💻 Roro Website</a>
-						</div>
+            <fieldset>
+              <legend>Windows 95</legend>
+              <img class="project-img" src="./assets/win98.png" alt="Win98">
+              <a href="https://jabaitech.github.io/comprog1-windows98/" target="_blank">
+                <p>Visit</p>
+              </a>
+            </fieldset>
 
-					</div>
-				</div>
-			</div>
+            <fieldset>
+              <legend>Roro Site</legend>
+              <img class="project-img" src="./assets/roro.png" alt="Roro Site">
+              <a href="https://rorosite-front.vercel.app/" target="_blank">
+                <p>Visit</p>
+              </a>
+            </fieldset>
 
-		</div>
-	</div>
+            <fieldset>
+              <legend>Bitforge</legend>
+              <img class="project-img" src="./assets/bitforge.png" alt="Bitforge">
+              <a href="https://BitForge1.github.io/" target="_blank">
+                <p>Visit</p>
+              </a>
+            </fieldset>
+
+            <fieldset>
+              <legend>RoFind</legend>
+              <img class="project-img" src="./assets/rofind.png" alt="RoFind">
+              <a href="https://ro-find.vercel.app/" target="_blank">
+                <p>Visit</p>
+              </a>
+            </fieldset>
+          </div>
+
+          <div id="md-panel" class="container-view" hidden>
+            <h1 style="text-align: center; user-select: none;"></h1>
+            <pre><code># README.md
+
+> Last Updated: 9/14/25 - 11:50PM
+
+### Why this design?
+> *I have choosen this design to be innovative and present fresh standards in webpages.*
+> *While also incorporating the feeling that the user viewing*
+> *my page is involved in the making.*
+
+> *My design choices is*
+> *influenced by other works such as the following:*
+> 1. https://www.robscanlon.com/encom-boardroom/ (Rob Scanlon)
+> 2. https://ertdfgcvb.xyz/ (Andreas Gysin)
+> 3. GitHub
+> 4. Android Studio
+
+### Credits:
+> 1. Google Fonts (Ubuntu & JetBrains Mono)
+> 2. Shields.io
+
+            </code></pre>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Terence Montecillo | <a href="mailto:V0nbiU8w@proton.me">Contact</a> | <a
+        href="https://github.com/Grizzey" target="_blank">GitHub</a></p>
+  </footer>
+
 </body>
 
 </html>
